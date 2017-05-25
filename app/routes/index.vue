@@ -13,7 +13,7 @@
             <div class="post-right">
 
               <!-- Note to self: Add v-for statement later -->
-              <div class="post-details">
+              <div v-for="post in posts" class="post-details">
 
               <!-- Note to self: Need anchor to attach permalink to https://www.reddit.com -->
               <!-- NTS: Image will need a v-bind:src once js is completed -->
@@ -25,12 +25,12 @@
 
               <!-- NTS: Title anchor will need :href="xyz" tag -->
                   <a href="#" class="detail-anchor">
-                    <p class="post-details__title">{{ title }}</p>
+                    <p class="post-details__title">{{ post.title }}</p>
                   </a>
 
               <!-- NTS: Author anchor will need :href="xyz" tag -->
                   <a href="#" class="detail-anchor">
-                    <p class="post-details__author">submitted by <span class="author-colour">{{ author }}</span></p>
+                    <p class="post-details__author">submitted by <span class="author-colour">{{ post.author }}</span></p>
                   </a>
 
               <!-- NTS: Add action/event for favorite button later -->
@@ -58,13 +58,18 @@ export default {
   name: 'Index',
   data() {
     return {
-      title: 'testing-title',
-      author: 'testing-author',
+      posts: [],
+      // title: 'testing-title',
+      // author: 'testing-author',
     };
   },
 
   created() {
-
+    fetch('https://www.reddit.com/r/graphic_design/top/.json')
+    .then(response => response.json())
+    .then((response) => {
+      this.posts = response.data.children.map(child => child.data);
+    });
   },
 
   mounted() {
