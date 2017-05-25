@@ -1,6 +1,43 @@
 // @import 'yoga';
 // @import 'normalize';
 
-// $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-// @import 'font-awesome';
+$fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
+@import 'font-awesome';
+
+// *** COLOURS ***
+
+// *GRAYSCALES*
+$c-black: #000;
+$c-white: #fff;
+$c-greylink: #888;
+$c-darkgrey: #414141;
+$c-lightgrey: #9e9e9e;
+
+// *RAINBOW COLOURS*
+$c-violet: #9400d3;
+$c-indigo: #4b0082;
+$c-blue: #00f;
+$c-green: #0f0;
+$c-yellow: #ff0 ;
+$c-orange: #ff7f00;
+$c-red: #f00;
+
+// *RANDOM COLOURS*
+$c-green: #00a42e;
+$c-hotpink: #fa00ff;
+$c-darkblue: #000a3e;
+$c-greenblue: #005243;
+$c-magenta: #7d0043;
+$c-purple: #30f;
+
+// *APP COLOURS*
+$c-reddit-blue: #cee3f8;
+$c-reddit-bluelink: #43adf0;
+$c-reddit-background: #eee;
+
+// *** IMPORTS ***
+
 @import 'box-sizing';
+@import 'css-resets';
+@import 'navbar';
+@import 'posts';
