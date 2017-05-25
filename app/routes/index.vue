@@ -12,23 +12,20 @@
           <div class="post">
             <div class="post-right">
 
-              <!-- Note to self: Add v-for statement later -->
               <div v-for="post in posts" class="post-details">
 
-              <!-- Note to self: Need anchor to attach permalink to https://www.reddit.com -->
-              <!-- NTS: Image will need a v-bind:src once js is completed -->
-                <a href="#" class="detail-anchor">
-                  <img src="#" alt="" class="post-left__img">
+              <!-- NTS: Anchor tag needs to attach to the permalink to the end of https://www.reddit.com -->
+                <a :href="post.permalink" class="detail-anchor">
+                  <img v-bind:src="post.thumbnail" alt="" class="post-left__img">
                 </a>
 
                 <div class="post-details__right">
 
-              <!-- NTS: Title anchor will need :href="xyz" tag -->
-                  <a href="#" class="detail-anchor">
+                  <a :href="post.url" class="detail-anchor">
                     <p class="post-details__title">{{ post.title }}</p>
                   </a>
 
-              <!-- NTS: Author anchor will need :href="xyz" tag -->
+              <!-- NTS: Anchor tag needs to attach the author to the end of https://www.reddit.com/user/ -->
                   <a href="#" class="detail-anchor">
                     <p class="post-details__author">submitted by <span class="author-colour">{{ post.author }}</span></p>
                   </a>
@@ -59,8 +56,6 @@ export default {
   data() {
     return {
       posts: [],
-      // title: 'testing-title',
-      // author: 'testing-author',
     };
   },
 
