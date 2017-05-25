@@ -1,0 +1,71 @@
+// *** POST CONTAINER STYLING ***
+
+.main {
+  padding: 1rem;
+  background: $c-reddit-background;
+}
+
+.post-container {
+  margin: 1rem;
+  border: 2px solid $c-orange;
+  background: $c-white;
+  box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.5);
+}
+
+.heading {
+  padding: 1rem;
+}
+
+.heading-title {
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid $c-black;
+  background: $c-reddit-background;
+}
+
+.post {
+  display: flex;
+}
+
+.detail-anchor {
+  text-decoration: none;
+}
+
+.post-details {
+  display: flex;
+
+  &__title {
+    margin-bottom: 0;
+    color: $c-reddit-bluelink;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__author {
+    margin-top: 0.2rem;
+    font-size: 0.6rem;
+  }
+
+  &__favorite {
+    transition: 0.2s ease-in-out;
+    color: $c-black;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.post-left__img {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+}
+
+.author-colour {
+  color: $c-reddit-bluelink;
+  text-decoration: underline;
+}
