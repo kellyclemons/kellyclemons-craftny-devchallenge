@@ -25,12 +25,12 @@
 
               <!-- NTS: Title anchor will need :href="xyz" tag -->
                   <a href="#" class="detail-anchor">
-                    <p class="post-details__title">Title - Handlebars Later</p>
+                    <p class="post-details__title">{{ title }}</p>
                   </a>
 
               <!-- NTS: Author anchor will need :href="xyz" tag -->
                   <a href="#" class="detail-anchor">
-                    <p class="post-details__author">submitted by <span class="author-colour">Author - Handlebars Later</span></p>
+                    <p class="post-details__author">submitted by <span class="author-colour">{{ author }}</span></p>
                   </a>
 
               <!-- NTS: Add action/event for favorite button later -->
@@ -58,6 +58,8 @@ export default {
   name: 'Index',
   data() {
     return {
+      title: 'testing-title',
+      author: 'testing-author',
     };
   },
 
